@@ -54,8 +54,6 @@
   padding: 8px;
   border: 1px solid #0e0e0e;
   border-radius: 4px;
-  width: 100%;
-  height: 100%;
   background: #fff;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   color: black;
@@ -63,7 +61,21 @@
   align-items: center;
   justify-content: center;
 }
-
+.lines{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content:flex-start;
+  align-items:flex-start;
+  outline: 1px solid red;
+}
+.columns{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content:flex-start;
+  align-items:flex-start;
+}
 .input {
   width: 100%;
   border: none;
