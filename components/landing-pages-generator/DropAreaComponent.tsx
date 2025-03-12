@@ -29,19 +29,6 @@ const DropAreaComponent: React.FC<{
         });
     }, [grid]);
 
-
-    // useEffect(()=>{
-    //     let updateDivisions = [...grid.divisions];
-    //     updateDivisions = updateDivisions.map(e=>{
-    //         let lineHeight = lineHeights[e.y];
-    //         if(lineHeight){
-    //             e.lineHeight = lineHeight;
-    //         }
-    //         return e});
-        
-    //     updateGrid(grid.id, grid.width, grid.height, updateDivisions);
-    // },[lineHeights]);
-
     useEffect(()=>{
         let maxValues = getMaxValues(grid.id);
         setLineHeights([]);
