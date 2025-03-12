@@ -72,7 +72,6 @@
 .columns{
   display: flex;
   flex-direction: column;
-  gap: 10px;
   justify-content:flex-start;
   align-items:flex-start;
 }
