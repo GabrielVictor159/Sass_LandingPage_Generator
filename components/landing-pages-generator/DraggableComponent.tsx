@@ -1,12 +1,15 @@
 import React, { useRef, useEffect } from "react";
 import { useDrag } from "react-dnd";
 
-const DraggableComponent: React.FC<{ type: string }> = ({ type }) => {
+const DraggableComponent: React.FC<{ type: string; id?: number }> = ({ type, id }) => {
   const dragRef = useRef<HTMLDivElement>(null);
 
   const [{ isDragging }, drag] = useDrag({
     type: "component",
-    item: { type },
+    item: () => ({
+      type,
+      id,
+    }),
     canDrag: () => true,
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
@@ -29,5 +32,6 @@ const DraggableComponent: React.FC<{ type: string }> = ({ type }) => {
     </div>
   );
 };
+
 
 export default DraggableComponent;
